@@ -1,0 +1,6 @@
+framework module Pods_ShahryTask {
+  umbrella header "Pods-ShahryTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

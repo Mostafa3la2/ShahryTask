@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AF0E77C9C2514983367273 /* Pods_ShahryTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D285650671FE335AB156B /* Pods_ShahryTaskTests.framework */; };
 		0DE502CA273189C300019AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502C9273189C300019AF8 /* AppDelegate.swift */; };
 		0DE502CC273189C300019AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CB273189C300019AF8 /* SceneDelegate.swift */; };
 		0DE502CE273189C300019AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CD273189C300019AF8 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		0DE502E1273189C400019AF8 /* ShahryTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502E0273189C400019AF8 /* ShahryTaskTests.swift */; };
 		0DE502EB273189C400019AF8 /* ShahryTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502EA273189C400019AF8 /* ShahryTaskUITests.swift */; };
 		0DE502ED273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502EC273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift */; };
+		CD81E78483D06B3A71EF5719 /* Pods_ShahryTask_ShahryTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160C1CD12825B599859E6A27 /* Pods_ShahryTask_ShahryTaskUITests.framework */; };
+		FD5EE9DC76356561B9D6D05C /* Pods_ShahryTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E378F6BBE74484126F43F99 /* Pods_ShahryTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		0DE502E6273189C400019AF8 /* ShahryTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShahryTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE502EA273189C400019AF8 /* ShahryTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryTaskUITests.swift; sourceTree = "<group>"; };
 		0DE502EC273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		160C1CD12825B599859E6A27 /* Pods_ShahryTask_ShahryTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahryTask_ShahryTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AFD78497C9D78AA1A6CC458 /* Pods-ShahryTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask.release.xcconfig"; path = "Target Support Files/Pods-ShahryTask/Pods-ShahryTask.release.xcconfig"; sourceTree = "<group>"; };
+		67BE7E5EBE7877270A327039 /* Pods-ShahryTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask.debug.xcconfig"; path = "Target Support Files/Pods-ShahryTask/Pods-ShahryTask.debug.xcconfig"; sourceTree = "<group>"; };
+		72742AD5566A0761D73AEB83 /* Pods-ShahryTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-ShahryTaskTests/Pods-ShahryTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DB893C18716A18A77750FCF /* Pods-ShahryTask-ShahryTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask-ShahryTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-ShahryTask-ShahryTaskUITests/Pods-ShahryTask-ShahryTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E378F6BBE74484126F43F99 /* Pods_ShahryTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahryTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F851CE3927499E8B496C19 /* Pods-ShahryTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTaskTests.release.xcconfig"; path = "Target Support Files/Pods-ShahryTaskTests/Pods-ShahryTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7E640E5143895B2104AC3DF /* Pods-ShahryTask-ShahryTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask-ShahryTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShahryTask-ShahryTaskUITests/Pods-ShahryTask-ShahryTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D93D285650671FE335AB156B /* Pods_ShahryTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahryTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5EE9DC76356561B9D6D05C /* Pods_ShahryTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AF0E77C9C2514983367273 /* Pods_ShahryTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD81E78483D06B3A71EF5719 /* Pods_ShahryTask_ShahryTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				0DE502DF273189C400019AF8 /* ShahryTaskTests */,
 				0DE502E9273189C400019AF8 /* ShahryTaskUITests */,
 				0DE502C7273189C300019AF8 /* Products */,
+				FB1BE4114E1505BCE21DD2AF /* Pods */,
+				E971CD31A4D2FEBB8E917CED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +116,14 @@
 		0DE502C8273189C300019AF8 /* ShahryTask */ = {
 			isa = PBXGroup;
 			children = (
+				0DE502F927318A7500019AF8 /* Models */,
+				0DE502FA27318A7B00019AF8 /* Views */,
+				0DE502FB27318A7F00019AF8 /* Controllers */,
+				0DE502FC27318A8700019AF8 /* Services */,
+				0DE502FD27318A8C00019AF8 /* Utilities */,
 				0DE502C9273189C300019AF8 /* AppDelegate.swift */,
 				0DE502CB273189C300019AF8 /* SceneDelegate.swift */,
-				0DE502CD273189C300019AF8 /* ViewController.swift */,
-				0DE502CF273189C300019AF8 /* Main.storyboard */,
 				0DE502D2273189C400019AF8 /* Assets.xcassets */,
-				0DE502D4273189C400019AF8 /* LaunchScreen.storyboard */,
 				0DE502D7273189C400019AF8 /* Info.plist */,
 			);
 			path = ShahryTask;
@@ -127,6 +146,75 @@
 			path = ShahryTaskUITests;
 			sourceTree = "<group>";
 		};
+		0DE502F927318A7500019AF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0DE502FA27318A7B00019AF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DE502FE27318AA800019AF8 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0DE502FB27318A7F00019AF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DE502CD273189C300019AF8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0DE502FC27318A8700019AF8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0DE502FD27318A8C00019AF8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0DE502FE27318AA800019AF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0DE502CF273189C300019AF8 /* Main.storyboard */,
+				0DE502D4273189C400019AF8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E971CD31A4D2FEBB8E917CED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E378F6BBE74484126F43F99 /* Pods_ShahryTask.framework */,
+				160C1CD12825B599859E6A27 /* Pods_ShahryTask_ShahryTaskUITests.framework */,
+				D93D285650671FE335AB156B /* Pods_ShahryTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1BE4114E1505BCE21DD2AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67BE7E5EBE7877270A327039 /* Pods-ShahryTask.debug.xcconfig */,
+				4AFD78497C9D78AA1A6CC458 /* Pods-ShahryTask.release.xcconfig */,
+				C7E640E5143895B2104AC3DF /* Pods-ShahryTask-ShahryTaskUITests.debug.xcconfig */,
+				8DB893C18716A18A77750FCF /* Pods-ShahryTask-ShahryTaskUITests.release.xcconfig */,
+				72742AD5566A0761D73AEB83 /* Pods-ShahryTaskTests.debug.xcconfig */,
+				C1F851CE3927499E8B496C19 /* Pods-ShahryTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE502F0273189C400019AF8 /* Build configuration list for PBXNativeTarget "ShahryTask" */;
 			buildPhases = (
+				2637448BBB5BCCE4344236B0 /* [CP] Check Pods Manifest.lock */,
 				0DE502C2273189C300019AF8 /* Sources */,
 				0DE502C3273189C300019AF8 /* Frameworks */,
 				0DE502C4273189C300019AF8 /* Resources */,
+				CD18873005309D0E9CA679A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE502F3273189C400019AF8 /* Build configuration list for PBXNativeTarget "ShahryTaskTests" */;
 			buildPhases = (
+				20001933EBC659C05B5F6F80 /* [CP] Check Pods Manifest.lock */,
 				0DE502D8273189C400019AF8 /* Sources */,
 				0DE502D9273189C400019AF8 /* Frameworks */,
 				0DE502DA273189C400019AF8 /* Resources */,
@@ -169,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE502F6273189C400019AF8 /* Build configuration list for PBXNativeTarget "ShahryTaskUITests" */;
 			buildPhases = (
+				B929AB5CDC1C7E3182E8D184 /* [CP] Check Pods Manifest.lock */,
 				0DE502E2273189C400019AF8 /* Sources */,
 				0DE502E3273189C400019AF8 /* Frameworks */,
 				0DE502E4273189C400019AF8 /* Resources */,
+				997B0B77DE9E227F5BA30294 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +345,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20001933EBC659C05B5F6F80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShahryTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2637448BBB5BCCE4344236B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShahryTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997B0B77DE9E227F5BA30294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShahryTask-ShahryTaskUITests/Pods-ShahryTask-ShahryTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShahryTask-ShahryTaskUITests/Pods-ShahryTask-ShahryTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShahryTask-ShahryTaskUITests/Pods-ShahryTask-ShahryTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B929AB5CDC1C7E3182E8D184 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShahryTask-ShahryTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD18873005309D0E9CA679A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShahryTask/Pods-ShahryTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShahryTask/Pods-ShahryTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShahryTask/Pods-ShahryTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0DE502C2273189C300019AF8 /* Sources */ = {
@@ -434,6 +630,7 @@
 		};
 		0DE502F1273189C400019AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BE7E5EBE7877270A327039 /* Pods-ShahryTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +659,7 @@
 		};
 		0DE502F2273189C400019AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFD78497C9D78AA1A6CC458 /* Pods-ShahryTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +688,7 @@
 		};
 		0DE502F4273189C400019AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72742AD5566A0761D73AEB83 /* Pods-ShahryTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +714,7 @@
 		};
 		0DE502F5273189C400019AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1F851CE3927499E8B496C19 /* Pods-ShahryTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +740,7 @@
 		};
 		0DE502F7273189C400019AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7E640E5143895B2104AC3DF /* Pods-ShahryTask-ShahryTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +764,7 @@
 		};
 		0DE502F8273189C400019AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB893C18716A18A77750FCF /* Pods-ShahryTask-ShahryTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
