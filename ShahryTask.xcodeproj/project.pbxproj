@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06AF0E77C9C2514983367273 /* Pods_ShahryTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D285650671FE335AB156B /* Pods_ShahryTaskTests.framework */; };
+		0D7928BC2731B90F006B7AD3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928BB2731B90F006B7AD3 /* ProductModel.swift */; };
+		0D7928BE2731CEC5006B7AD3 /* ProductsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928BD2731CEC5006B7AD3 /* ProductsServices.swift */; };
+		0D7928C02731D018006B7AD3 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928BF2731D018006B7AD3 /* HelperFunctions.swift */; };
+		0D7928C22731D059006B7AD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928C12731D059006B7AD3 /* Constants.swift */; };
 		0DE502CA273189C300019AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502C9273189C300019AF8 /* AppDelegate.swift */; };
 		0DE502CC273189C300019AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CB273189C300019AF8 /* SceneDelegate.swift */; };
 		0DE502CE273189C300019AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CD273189C300019AF8 /* ViewController.swift */; };
@@ -17,6 +21,9 @@
 		0DE502E1273189C400019AF8 /* ShahryTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502E0273189C400019AF8 /* ShahryTaskTests.swift */; };
 		0DE502EB273189C400019AF8 /* ShahryTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502EA273189C400019AF8 /* ShahryTaskUITests.swift */; };
 		0DE502ED273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502EC273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift */; };
+		0DE503012731939C00019AF8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE503002731939C00019AF8 /* Extensions.swift */; };
+		0DE503052731968200019AF8 /* HomeProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE503042731968200019AF8 /* HomeProductsViewController.swift */; };
+		0DEE24792731A17B0036533F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE24782731A17B0036533F /* ProductCollectionViewCell.swift */; };
 		CD81E78483D06B3A71EF5719 /* Pods_ShahryTask_ShahryTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160C1CD12825B599859E6A27 /* Pods_ShahryTask_ShahryTaskUITests.framework */; };
 		FD5EE9DC76356561B9D6D05C /* Pods_ShahryTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E378F6BBE74484126F43F99 /* Pods_ShahryTask.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7928BB2731B90F006B7AD3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		0D7928BD2731CEC5006B7AD3 /* ProductsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServices.swift; sourceTree = "<group>"; };
+		0D7928BF2731D018006B7AD3 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = "../../../swccsurvay-ios-master/SWCC/Supporting Files/HelperFunctions.swift"; sourceTree = "<group>"; };
+		0D7928C12731D059006B7AD3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../swccsurvay-ios-master/SWCC/Supporting Files/Constants.swift"; sourceTree = "<group>"; };
 		0DE502C6273189C300019AF8 /* ShahryTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShahryTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE502C9273189C300019AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE502CB273189C300019AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		0DE502E6273189C400019AF8 /* ShahryTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShahryTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE502EA273189C400019AF8 /* ShahryTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryTaskUITests.swift; sourceTree = "<group>"; };
 		0DE502EC273189C400019AF8 /* ShahryTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShahryTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DE503002731939C00019AF8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "../../../swccsurvay-ios-master/SWCC/Supporting Files/Extensions.swift"; sourceTree = "<group>"; };
+		0DE503042731968200019AF8 /* HomeProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsViewController.swift; sourceTree = "<group>"; };
+		0DEE24782731A17B0036533F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		160C1CD12825B599859E6A27 /* Pods_ShahryTask_ShahryTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahryTask_ShahryTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFD78497C9D78AA1A6CC458 /* Pods-ShahryTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask.release.xcconfig"; path = "Target Support Files/Pods-ShahryTask/Pods-ShahryTask.release.xcconfig"; sourceTree = "<group>"; };
 		67BE7E5EBE7877270A327039 /* Pods-ShahryTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahryTask.debug.xcconfig"; path = "Target Support Files/Pods-ShahryTask/Pods-ShahryTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +163,7 @@
 		0DE502F927318A7500019AF8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0D7928BB2731B90F006B7AD3 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +171,7 @@
 		0DE502FA27318A7B00019AF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0DEE24772731A1630036533F /* CollectionViewCells */,
 				0DE502FE27318AA800019AF8 /* Storyboards */,
 			);
 			path = Views;
@@ -165,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE502CD273189C300019AF8 /* ViewController.swift */,
+				0DE503042731968200019AF8 /* HomeProductsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +189,7 @@
 		0DE502FC27318A8700019AF8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0D7928BD2731CEC5006B7AD3 /* ProductsServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -179,6 +197,9 @@
 		0DE502FD27318A8C00019AF8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D7928C12731D059006B7AD3 /* Constants.swift */,
+				0D7928BF2731D018006B7AD3 /* HelperFunctions.swift */,
+				0DE503002731939C00019AF8 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -190,6 +211,14 @@
 				0DE502D4273189C400019AF8 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0DEE24772731A1630036533F /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0DEE24782731A17B0036533F /* ProductCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		E971CD31A4D2FEBB8E917CED /* Frameworks */ = {
@@ -455,8 +484,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE502CE273189C300019AF8 /* ViewController.swift in Sources */,
+				0D7928BE2731CEC5006B7AD3 /* ProductsServices.swift in Sources */,
+				0DE503052731968200019AF8 /* HomeProductsViewController.swift in Sources */,
 				0DE502CA273189C300019AF8 /* AppDelegate.swift in Sources */,
 				0DE502CC273189C300019AF8 /* SceneDelegate.swift in Sources */,
+				0D7928C22731D059006B7AD3 /* Constants.swift in Sources */,
+				0DEE24792731A17B0036533F /* ProductCollectionViewCell.swift in Sources */,
+				0D7928BC2731B90F006B7AD3 /* ProductModel.swift in Sources */,
+				0DE503012731939C00019AF8 /* Extensions.swift in Sources */,
+				0D7928C02731D018006B7AD3 /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +678,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,7 +690,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -671,6 +708,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -682,7 +720,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

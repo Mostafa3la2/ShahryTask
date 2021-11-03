@@ -9,6 +9,10 @@ target 'ShahryTask' do
   pod 'Alamofire', '~> 5.4'
   pod 'SkeletonView'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Cosmos', '~> 23.0'
+  pod 'SwiftMessages'
+  pod 'Kingfisher', '~> 7.0'
+  pod 'IQKeyboardManagerSwift'
 
   target 'ShahryTaskTests' do
     inherit! :search_paths
