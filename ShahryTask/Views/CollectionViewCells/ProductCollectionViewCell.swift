@@ -19,7 +19,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
 
     func configureCell(productData:ProductModel){
         self.productRating.rating = Double(productData.rating?.rate ?? 0)
-        self.productPrice.text = "\(productData.price ?? 0)"
+        self.productPrice.text = "$\(productData.price ?? 0)"
         self.productTitle.text = productData.title
         self.productImage.kf.setImage(with:URL(string:productData.image!))
     }

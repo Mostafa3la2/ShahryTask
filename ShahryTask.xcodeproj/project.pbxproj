@@ -12,6 +12,7 @@
 		0D7928BE2731CEC5006B7AD3 /* ProductsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928BD2731CEC5006B7AD3 /* ProductsServices.swift */; };
 		0D7928C02731D018006B7AD3 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928BF2731D018006B7AD3 /* HelperFunctions.swift */; };
 		0D7928C22731D059006B7AD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928C12731D059006B7AD3 /* Constants.swift */; };
+		0D7928C42732E890006B7AD3 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7928C32732E890006B7AD3 /* ProductDetailsViewController.swift */; };
 		0DE502CA273189C300019AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502C9273189C300019AF8 /* AppDelegate.swift */; };
 		0DE502CC273189C300019AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CB273189C300019AF8 /* SceneDelegate.swift */; };
 		0DE502CE273189C300019AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE502CD273189C300019AF8 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		0D7928BD2731CEC5006B7AD3 /* ProductsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServices.swift; sourceTree = "<group>"; };
 		0D7928BF2731D018006B7AD3 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = "../../../swccsurvay-ios-master/SWCC/Supporting Files/HelperFunctions.swift"; sourceTree = "<group>"; };
 		0D7928C12731D059006B7AD3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../swccsurvay-ios-master/SWCC/Supporting Files/Constants.swift"; sourceTree = "<group>"; };
+		0D7928C32732E890006B7AD3 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0DE502C6273189C300019AF8 /* ShahryTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShahryTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE502C9273189C300019AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE502CB273189C300019AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				0DE502CD273189C300019AF8 /* ViewController.swift */,
 				0DE503042731968200019AF8 /* HomeProductsViewController.swift */,
+				0D7928C32732E890006B7AD3 /* ProductDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			files = (
 				0DE502CE273189C300019AF8 /* ViewController.swift in Sources */,
 				0D7928BE2731CEC5006B7AD3 /* ProductsServices.swift in Sources */,
+				0D7928C42732E890006B7AD3 /* ProductDetailsViewController.swift in Sources */,
 				0DE503052731968200019AF8 /* HomeProductsViewController.swift in Sources */,
 				0DE502CA273189C300019AF8 /* AppDelegate.swift in Sources */,
 				0DE502CC273189C300019AF8 /* SceneDelegate.swift in Sources */,

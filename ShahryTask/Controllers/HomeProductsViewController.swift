@@ -170,6 +170,12 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = filteredData[indexPath.row]
+        let productDetails = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "details") as! ProductDetailsViewController
+        productDetails.product = product
+        self.navigationController?.pushViewController(productDetails, animated: true)
+    }
     
     
 }
