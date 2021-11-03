@@ -9,11 +9,12 @@ import Foundation
 import Alamofire
 enum ProductsServices{
     case sharedInstance
-    
-    func getProducts(completion:@escaping(_ success:Bool,_ productsData:[ProductModel]?)->()){
+    static let PAGINATION_LIMIT = 20
+    func getProducts(limit:Int = 5,completion:@escaping(_ success:Bool,_ productsData:[ProductModel]?)->()){
         
         let url = BASE_URL
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default).responseJSON { (response) in
+        let params = ["limit":"\(limit)"]
+        AF.request(url, method: .get, parameters: params, encoding: URLEncoding.default).responseJSON { (response) in
             if validateResponse(response: response){
                 
                 let decoder = JSONDecoder()

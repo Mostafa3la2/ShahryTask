@@ -15,7 +15,7 @@ enum ViewMode{
 }
 enum SortType:String,CaseIterable{
     static var asArray: [SortType] {return self.allCases}
-
+    
     case priceAsc = "Price Ascending ↑"
     case priceDesc = "Price Descending ↓"
     case ratingAsc = "Rating Ascending ↑"
@@ -28,13 +28,30 @@ class HomeProductsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
+    private var firstPage = true
+    let skeletonTemplateCellCount = 6
+    private var searchActive = false
     private var allProductsData : [ProductModel] = []
     private var filteredData:[ProductModel] = []
+    private var searchResults:[ProductModel] = []
     let refreshControl = UIRefreshControl()
     var viewMode:ViewMode = .grid
     var sortingType:SortType?
+    private var limit = 6
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUIElements()
+        getProducts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getProducts()
+    }
+    fileprivate func configureUIElements() {
+        searchBar.delegate = self
         searchBar.searchTextField.backgroundColor = UIColor.white
         sortTextField.delegate = self
         setupPickerView(forTextField: sortTextField)
@@ -42,16 +59,10 @@ class HomeProductsViewController: UIViewController {
         productsCollectionView.dataSource = self
         productsCollectionView.isSkeletonable = true
         productsCollectionView.showAnimatedSkeleton()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
-        
-        //productsCollectionView.refreshControl = refreshControl // not re
-
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        ProductsServices.sharedInstance.getProducts { success, returnedProductsData in
+    func getProducts(){
+        ProductsServices.sharedInstance.getProducts(limit:limit) { success, returnedProductsData in
             if success{
                 self.allProductsData = returnedProductsData!
                 self.filteredData = self.allProductsData
@@ -61,9 +72,6 @@ class HomeProductsViewController: UIViewController {
         }
     }
     
-    @objc func refresh(_ sender: AnyObject) {
-       // Code to refresh table view
-    }
     
     @IBAction func toggleViewModeButton(_ sender: UIButton) {
         if viewMode == .grid{
@@ -111,6 +119,8 @@ class HomeProductsViewController: UIViewController {
             sortTextField.text = ""
             filteredData = allProductsData
         }
+        searchActive = false
+        searchBar.text = ""
         productsCollectionView.reloadData()
     }
     
@@ -122,7 +132,7 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return filteredData.count == 0 ? skeletonTemplateCellCount:(searchActive ? searchResults.count: filteredData.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -132,7 +142,7 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
         }
         cell.isSkeletonable = true
         if filteredData.count > 0{
-            let product = filteredData[indexPath.row]
+            let product = searchActive ? searchResults[indexPath.row]: filteredData[indexPath.row]
             cell.configureCell(productData: product)
         }
         return cell
@@ -141,17 +151,18 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
     
     
     func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return (filteredData.count == 0) ? skeletonTemplateCellCount:(searchActive ? searchResults.count: filteredData.count)
     }
     
     func collectionSkeletonView(_ skeletonView: UICollectionView, skeletonCellForItemAt indexPath: IndexPath) -> UICollectionViewCell? {
+        
         let identifier = (viewMode == .grid) ? "product":"productRow"
         guard let cell = skeletonView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? ProductCollectionViewCell else{
             return UICollectionViewCell()
         }
         cell.isSkeletonable = true
         if filteredData.count > 0{
-            let product = filteredData[indexPath.row]
+            let product = searchActive ? searchResults[indexPath.row]: filteredData[indexPath.row]
             cell.configureCell(productData: product)
         }
         return cell
@@ -160,8 +171,7 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return (viewMode == .grid) ? CGSize(width: collectionView.frame.width/2 - 20, height: collectionView.frame.height/2.5)
         :
-        CGSize(width: collectionView.frame.width - 10, height: collectionView.frame.height/5)
-        
+        CGSize(width: collectionView.frame.width - 20, height: collectionView.frame.height/5)
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -171,13 +181,40 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
         return 5
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let product = filteredData[indexPath.row]
+        
+        let product = searchActive ? searchResults[indexPath.row]: filteredData[indexPath.row]
         let productDetails = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "details") as! ProductDetailsViewController
         productDetails.product = product
         self.navigationController?.pushViewController(productDetails, animated: true)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
+        return footerView
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if limit >= 20 || searchActive{
+            return CGSize(width:0,height:0)
+        }else{
+            return CGSize(width: collectionView.frame.width, height: 50)
+        }
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if limit < ProductsServices.PAGINATION_LIMIT{
+            limit+=4
+            getProducts()
+        }
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate{
+            if limit < ProductsServices.PAGINATION_LIMIT{
+                limit+=4
+                getProducts()
+            }
+            
+        }
+    }
 }
 extension HomeProductsViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -193,13 +230,12 @@ extension HomeProductsViewController:UIPickerViewDelegate,UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row > 0{
             sortingType = SortType.asArray[row-1]
-            
         }else{
             sortingType = nil
         }
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
- 
+        
         return 5
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -209,5 +245,20 @@ extension HomeProductsViewController:UIPickerViewDelegate,UIPickerViewDataSource
 extension HomeProductsViewController:UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         sort()
+    }
+}
+extension HomeProductsViewController:UISearchBarDelegate{
+   
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count == 0 {
+            searchActive = false
+        }else{
+            searchActive = true
+            let unifiedSearchText = searchText.lowercased()
+            searchResults = filteredData.filter{
+                return $0.title!.lowercased().starts(with: unifiedSearchText)
+            }
+        }
+        productsCollectionView.reloadData()
     }
 }
