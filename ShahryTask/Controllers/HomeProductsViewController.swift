@@ -58,7 +58,7 @@ class HomeProductsViewController: UIViewController {
         productsCollectionView.isSkeletonable = true
         productsCollectionView.showAnimatedSkeleton()
         getProducts()
-
+        
     }
     
     func getProducts(){
@@ -200,19 +200,18 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
             return CGSize(width: collectionView.frame.width, height: 50)
         }
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if limit < ProductsServices.PAGINATION_LIMIT{
-            limit+=4
-            getProducts()
-        }
-    }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate{
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewHeight = scrollView.frame.size.height
+        let scrollContentSizeHeight = scrollView.contentSize.height
+        let scrollOffset = scrollView.contentOffset.y
+        if (scrollOffset + scrollViewHeight == scrollContentSizeHeight)
+        {
+            // then we are at the end
             if limit < ProductsServices.PAGINATION_LIMIT{
                 limit+=4
                 getProducts()
             }
-            
         }
     }
 }
@@ -248,7 +247,7 @@ extension HomeProductsViewController:UITextFieldDelegate{
     }
 }
 extension HomeProductsViewController:UISearchBarDelegate{
-   
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
             searchActive = false
