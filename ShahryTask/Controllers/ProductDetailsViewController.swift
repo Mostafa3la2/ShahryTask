@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+import Cosmos
 class ProductDetailsViewController: UIViewController {
 
+    @IBOutlet weak var productRating: CosmosView!
     @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var productCategory: UILabel!
     @IBOutlet weak var productPrice: UILabel!
@@ -20,11 +21,11 @@ class ProductDetailsViewController: UIViewController {
         super.viewDidLoad()
         productTitle.text = product!.title
         productPrice.text = "$\(product!.price!)"
+        self.productRating.rating = Double(product!.rating?.rate ?? 0)
         productCategory.text = "Category: " + product!.category!
         productDescription.text = product!.descriptionField
         productImage.kf.setImage(with:URL(string:product!.image!))
         self.navigationItem.title = product?.title
-
         // Do any additional setup after loading the view.
     }
     

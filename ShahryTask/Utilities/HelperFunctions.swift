@@ -1,11 +1,4 @@
-////
-////  HelperFunctions.swift
-////  Maan
-////
-////  Created by DP on February/16/19.
-////  Copyright © 2019 DP. All rights reserved.
-////
-//
+
 import Foundation
 import UIKit
 import SwiftyJSON

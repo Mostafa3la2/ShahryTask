@@ -43,12 +43,10 @@ class HomeProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUIElements()
-        getProducts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        getProducts()
+        super.viewWillAppear(animated)
     }
     fileprivate func configureUIElements() {
         searchBar.delegate = self
@@ -59,13 +57,15 @@ class HomeProductsViewController: UIViewController {
         productsCollectionView.dataSource = self
         productsCollectionView.isSkeletonable = true
         productsCollectionView.showAnimatedSkeleton()
+        getProducts()
+
     }
     
     func getProducts(){
         ProductsServices.sharedInstance.getProducts(limit:limit) { success, returnedProductsData in
             if success{
                 self.allProductsData = returnedProductsData!
-                self.filteredData = self.allProductsData
+                self.sort()
                 self.productsCollectionView.reloadData()
                 self.productsCollectionView.hideSkeleton()
             }
@@ -220,7 +220,7 @@ extension HomeProductsViewController:UIPickerViewDelegate,UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         var title:String?
         if row == 0{
-            title = "Select Sort Type"
+            title = "Default"
         }else{
             title = SortType.asArray[row-1].rawValue
         }

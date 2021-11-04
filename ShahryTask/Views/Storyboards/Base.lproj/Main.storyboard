@@ -83,7 +83,7 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ote-AU-NVc" customClass="CosmosView" customModule="Cosmos">
+                                                                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ote-AU-NVc" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="0.0" y="44.666666666666664" width="188.66666666666666" height="22.333333333333336"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
@@ -138,6 +138,7 @@
                                         <size key="customSize" width="299" height="87"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isUserInteractionDisabledWhenSkeletonIsActive" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="productImage" destination="dmN-iA-9Vh" id="5uz-cG-v7i"/>
@@ -183,7 +184,7 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INB-tX-VlU" customClass="CosmosView" customModule="Cosmos">
+                                                                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INB-tX-VlU" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="0.0" y="77.333333333333314" width="180" height="38.666666666666657"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
@@ -384,7 +385,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-rp-uX9" customClass="CosmosView" customModule="Cosmos">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-rp-uX9" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="20" y="38.666666666666686" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NrW-cH-Gig"/>
@@ -472,6 +473,7 @@
                         <outlet property="productDescription" destination="oW6-3t-3vz" id="ZID-zW-uya"/>
                         <outlet property="productImage" destination="wOg-eL-zFb" id="qIz-cA-4CZ"/>
                         <outlet property="productPrice" destination="l6h-q6-JJA" id="eYr-fL-7JQ"/>
+                        <outlet property="productRating" destination="FnN-rp-uX9" id="F7U-os-szJ"/>
                         <outlet property="productTitle" destination="7Em-DK-Zrh" id="hz5-2T-g7N"/>
                     </connections>
                 </viewController>
