@@ -37,7 +37,7 @@ class NetworkLogger: EventMonitor {
   let queue = DispatchQueue(label: "com.Mostafa3la2.ShahryTask.networklogger")
 
   func requestDidFinish(_ request: Request) {
-    print(request.description)
+    //print(request.description)
   }
 
   func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
@@ -45,7 +45,7 @@ class NetworkLogger: EventMonitor {
       return
     }
     if let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-      print(json)
+      //print(json)
     }
   }
 }

@@ -203,12 +203,16 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
             return CGSize(width: collectionView.frame.width, height: 50)
         }
     }
-
+    
+    //detect scrolling to bottom
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollViewHeight = scrollView.frame.size.height
         let scrollContentSizeHeight = scrollView.contentSize.height
         let scrollOffset = scrollView.contentOffset.y
-        if (scrollOffset + scrollViewHeight == scrollContentSizeHeight)
+        //this was added to fix pagination not working on smaller screen sizes due to floating point percision
+        let deltaHeight = scrollContentSizeHeight - (scrollOffset + scrollViewHeight)
+        print(deltaHeight)
+        if (deltaHeight <= 0.25 && deltaHeight >= -0.25)
         {
             // then we are at the end
             if limit < ProductsServices.PAGINATION_LIMIT{

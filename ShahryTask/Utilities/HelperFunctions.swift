@@ -5,7 +5,6 @@ import SwiftyJSON
 import SwiftMessages
 import Alamofire
 public func validateResponse(response:AFDataResponse<Any>,showNotification:Bool = true) ->Bool{
-    print(response.response?.statusCode)
     switch response.result {
     case .success:
         guard let code = response.response?.statusCode  else {return false}
