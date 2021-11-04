@@ -13,9 +13,10 @@ enum ViewMode{
     case grid
     case list
 }
+
 enum SortType:String,CaseIterable{
     static var asArray: [SortType] {return self.allCases}
-    
+
     case priceAsc = "Price Ascending ↑"
     case priceDesc = "Price Descending ↓"
     case ratingAsc = "Rating Ascending ↑"
@@ -28,13 +29,11 @@ class HomeProductsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
-    private var firstPage = true
     let skeletonTemplateCellCount = 6
     private var searchActive = false
     private var allProductsData : [ProductModel] = []
     private var filteredData:[ProductModel] = []
     private var searchResults:[ProductModel] = []
-    let refreshControl = UIRefreshControl()
     var viewMode:ViewMode = .grid
     var sortingType:SortType?
     private var limit = 6
@@ -119,6 +118,8 @@ class HomeProductsViewController: UIViewController {
             sortTextField.text = ""
             filteredData = allProductsData
         }
+        
+        //cancel search when sorting to avoid data conflict
         searchActive = false
         searchBar.text = ""
         productsCollectionView.reloadData()
@@ -169,6 +170,7 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //adjust cell size based on view mode
         return (viewMode == .grid) ? CGSize(width: collectionView.frame.width/2 - 20, height: collectionView.frame.height/2.5)
         :
         CGSize(width: collectionView.frame.width - 20, height: collectionView.frame.height/5)
@@ -194,7 +196,8 @@ extension HomeProductsViewController:UICollectionViewDelegate,UICollectionViewDa
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        if limit >= 20 || searchActive{
+        //disable spinner when pagination ends
+        if limit >= ProductsServices.PAGINATION_LIMIT || searchActive{
             return CGSize(width:0,height:0)
         }else{
             return CGSize(width: collectionView.frame.width, height: 50)

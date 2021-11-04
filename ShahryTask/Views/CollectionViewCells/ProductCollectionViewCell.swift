@@ -7,7 +7,6 @@
 
 import UIKit
 import Cosmos
-import SkeletonView
 import Kingfisher
 class ProductCollectionViewCell: UICollectionViewCell {
     
