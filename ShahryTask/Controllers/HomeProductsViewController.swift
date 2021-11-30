@@ -7,8 +7,7 @@
 
 import UIKit
 import SkeletonView
-import SwiftUI
-
+import Moya
 enum ViewMode{
     case grid
     case list
@@ -16,7 +15,7 @@ enum ViewMode{
 
 enum SortType:String,CaseIterable{
     static var asArray: [SortType] {return self.allCases}
-
+    
     case priceAsc = "Price Ascending ↑"
     case priceDesc = "Price Descending ↓"
     case ratingAsc = "Rating Ascending ↑"
@@ -61,12 +60,38 @@ class HomeProductsViewController: UIViewController {
     }
     
     func getProducts(){
-        ProductsServices.sharedInstance.getProducts(limit:limit) { success, returnedProductsData in
-            if success{
-                self.allProductsData = returnedProductsData!
-                self.sort()
-                self.productsCollectionView.reloadData()
-                self.productsCollectionView.hideSkeleton()
+        //        ProductsServices.sharedInstance.getProducts(limit:limit) { success, returnedProductsData in
+        //            if success{
+        //                self.allProductsData = returnedProductsData!
+        //                self.sort()
+        //                self.productsCollectionView.reloadData()
+        //                self.productsCollectionView.hideSkeleton()
+        //            }
+        //        }
+        //maybe this should be moved elsewhere
+        let productsProvide = MoyaProvider<ProductsServices>(plugins:[CachePolicyPlugin()])
+        productsProvide.request(.getProducts(limit: limit)) { result in
+            
+            switch result{
+            case .success(let response):
+                if response.statusCode < 400{
+                let decoder = JSONDecoder()
+                do{
+
+                    let productsData = try decoder.decode([ProductModel].self, from: response.data)
+                    self.allProductsData = productsData
+                    self.sort()
+                    self.productsCollectionView.reloadData()
+                    self.productsCollectionView.hideSkeleton()
+                }catch{
+                    print(error.localizedDescription)
+                }
+                }else{
+                    print("5555")
+                }
+            case .failure(let error):
+                
+                print(error.localizedDescription)
             }
         }
     }

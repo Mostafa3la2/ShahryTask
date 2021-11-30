@@ -13,6 +13,7 @@ target 'ShahryTask' do
   pod 'SwiftMessages'
   pod 'Kingfisher', '~> 7.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'Moya', '~> 15.0'
 
   target 'ShahryTaskTests' do
     inherit! :search_paths

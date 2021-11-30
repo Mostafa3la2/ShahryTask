@@ -3,6 +3,10 @@ PODS:
   - Cosmos (23.0.0)
   - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (7.1.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - SkeletonView (1.25.2)
   - SwiftMessages (9.0.5):
     - SwiftMessages/App (= 9.0.5)
@@ -14,6 +18,7 @@ DEPENDENCIES:
   - Cosmos (~> 23.0)
   - IQKeyboardManagerSwift
   - Kingfisher (~> 7.0)
+  - Moya (~> 15.0)
   - SkeletonView
   - SwiftMessages
   - SwiftyJSON (~> 4.0)
@@ -24,6 +29,7 @@ SPEC REPOS:
     - Cosmos
     - IQKeyboardManagerSwift
     - Kingfisher
+    - Moya
     - SkeletonView
     - SwiftMessages
     - SwiftyJSON
@@ -33,10 +39,11 @@ SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SkeletonView: 820b2bbd180d7408f3f03b6462cfc3cac39d2ef2
   SwiftMessages: 9cca50659fa22bb523b4dd2a958d4442e843a354
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 526c904ac93a003c7c6cea522de3d215deda4892
+PODFILE CHECKSUM: 26e2400d927413a7b2b8496a8e1f8abcf17d79c7
 
 COCOAPODS: 1.11.2
